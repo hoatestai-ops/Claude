@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sổ Calo Việt</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Ghi calo bữa ăn với món Việt, tính mục tiêu calo và lập lộ trình giảm cân theo tuần.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#hom-nay" aria-label="Sổ Calo Việt, về trang Hôm nay">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 14h24a12 12 0 0 1-24 0Z" fill="currentColor"/><path d="M11 11c0-3 2-3 2-6M16 11c0-3 2-3 2-6M21 11c0-3 2-3 2-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Sổ Calo Việt</span>
+    </a>
+    <nav class="tabs" aria-label="Các mục">
+      <a href="#hom-nay" data-nav="hom-nay">Hôm nay</a>
+      <a href="#ke-hoach" data-nav="ke-hoach">Kế hoạch</a>
+      <a href="#can-nang" data-nav="can-nang">Cân nặng</a>
+      <a href="#ho-so" data-nav="ho-so">Hồ sơ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div id="sample-banner" class="banner" hidden>
+    <p><strong>Đang xem dữ liệu mẫu.</strong> Đây là số liệu của một người ví dụ (nữ, 28 tuổi, 162 cm) để bạn thấy app hoạt động thế nào.</p>
+    <button type="button" class="btn btn-primary" data-action="clear-sample">Xoá mẫu, nhập hồ sơ của tôi</button>
+  </div>
+  <section id="view-hom-nay" class="view" aria-label="Nhật ký hôm nay"></section>
+  <section id="view-ke-hoach" class="view" aria-label="Kế hoạch giảm cân" hidden></section>
+  <section id="view-can-nang" class="view" aria-label="Theo dõi cân nặng" hidden></section>
+  <section id="view-ho-so" class="view" aria-label="Hồ sơ" hidden></section>
+  <p class="footnote">Số liệu calo là ước lượng trung bình cho khẩu phần phổ biến. App không thay thế tư vấn của bác sĩ hay chuyên gia dinh dưỡng. Dữ liệu chỉ lưu trên trình duyệt của bạn.</p>
+</main>
+
+<div id="sheet" class="sheet" hidden>
+  <div class="sheet-backdrop" data-action="close-sheet"></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title"></div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/foods.js"></script>
+<script src="js/calc.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

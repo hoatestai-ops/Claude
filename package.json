@@ -1,0 +1,11 @@
+{
+  "name": "so-calo-viet",
+  "version": "1.0.0",
+  "description": "Ghi calo bữa ăn với món Việt và lập kế hoạch giảm cân",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "start": "python3 -m http.server 8080"
+  },
+  "license": "MIT"
+}
